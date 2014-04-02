@@ -15,7 +15,7 @@ function HTMLActuator() {
     512: {'str': '512 ', 'c': '#f9f6f2', 'bc': '#edc850'},
     1024: {'str': '1024', 'c': '#f9f6f2', 'bc': '#edc53f'},
     2048: {'str': '2048', 'c': '#f9f6f2', 'bc': '#edc22e'},
-    'game-on': {'str': 'You win!', 'c': 'red', 'bc': 'white'},
+    'game-won': {'str': 'You win!', 'c': 'red', 'bc': 'white'},
     'game-over': {'str': 'Game over!', 'c': 'red', 'bc': 'white'},
   };
 
@@ -29,6 +29,8 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
   window.requestAnimationFrame(function () {
     //!self.clearContainer(self.tileContainer);
     self.clearContainer(null);
+
+    // 这里需要一个正对角线翻转
 
     grid.cells.forEach(function (column) {
       column.forEach(function (cell) {
@@ -155,7 +157,7 @@ HTMLActuator.prototype.message = function (won) {
 
   //this.messageContainer.classList.add(type);
   //this.messageContainer.getElementsByTagName("p")[0].textContent = message;
-  this.writeConsole([message], ['"color: ' + this.styledic[type].c + ';background-color: ' + this.styledic[type].bc + ';"']);
+  this.writeConsole(["%c" + message], ['"color: ' + this.styledic[type].c + ';background-color: ' + this.styledic[type].bc + ';"']);
 };
 
 HTMLActuator.prototype.clearMessage = function () {
