@@ -1,7 +1,9 @@
 console2048
 ===========
 
-Javascript implementation of 2048 game for chrome console.
+A clone of 2048 game for chrome console.
+
+[Click here](http://hueidou.github.io/console2048) to play it!
 
 Base on: https://github.com/gabrielecirulli/2048<br />
 Reference:
