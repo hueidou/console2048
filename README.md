@@ -3,6 +3,8 @@ console2048
 
 A clone of 2048 game for chrome console.
 
+![Alt text](http://hueidou.github.io/console2048/images/screenshot_console2048.png "Screenshot of console2048")
+
 [Click here](http://hueidou.github.io/console2048) to play it!
 
 Base on: https://github.com/gabrielecirulli/2048<br />
